@@ -1,0 +1,68 @@
+{% extends "base_template.html" %}
+
+{% block title %}
+<title>Apply for Membership</title>
+{% endblock %}
+
+{% block content %}
+<h1>Apply for Membership</h1>
+<!--test text-->
+<form action="{{ url_for ('login')}}" method="post">
+    <div class ="mb-3"> 
+        <label for="Username" class="Form-label">Username :</label>
+        <input type ="text" class="form-control" id="Username" 
+        name="Username" placeholder="your Username" required>
+    </div><!--Username-->
+
+    <div class ="mb-3"> 
+        <label for="Password" class="Form-label">Password :</label>
+        <input type ="text" class="form-control" id="Password" 
+        name="Password" placeholder="your Password" required>
+    </div><!--Pass-->
+
+    <div class ="mb-3"> 
+        <label for="Name" class="Form-label">Name-Surname :</label>
+        <input type ="text" class="form-control" id="Name" 
+        name="Name" placeholder="your Name" required>
+    </div><!--Name-->
+
+    <div class ="mb-3"> 
+        <label for="phone_number" class="Form-label">phone number:</label>
+        <input type ="text" class="form-control" id="phone_number" 
+        name="phone_number" placeholder="your phone number" required>
+    </div><!--phone-->
+
+    <div class ="mb-3"> 
+        <label for="sex" class="Form-label">sex</label>
+        <select class="form-control" name="sex" id="sex">
+            <option value="-----"><Fieldset></Fieldset>-----</option>
+            <option value="female">female</option>
+            <option value="man">man</option>
+        </select>
+    </div><!--sex-->
+
+    <div class="mb-3">
+        <label for="picture" class="picture">picture</label>
+        <input type="file" name="picture" id="picture">
+    </div><!--picture-->
+
+    <div class="mb-3">
+        <label for="day" class="day">Day</label>
+        <input type="date" name="day" id="day">
+    </div><!--day-->
+
+    <div class="mb-3">
+        <label for="Address" class="form-label">Address</label>
+        <textarea class="form-control" name="Address" id="Address" rows="7"></textarea>
+    </div><!--Address-->
+
+    <div class="mb-3">
+        <button  type="submit" class="btn btn-primary">Save</button>
+    </div><!--Save-->
+
+    <div class="mb-3">
+        <button  type="reset" class="btn btn-primary">cancel</button>
+    </div><!--Cancel-->
+
+</form>
+{% endblock %}

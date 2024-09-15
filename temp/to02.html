@@ -1,0 +1,21 @@
+<!--login-->
+<h1>login</h1>
+<!--test text-->
+<form action="{{ url_for ('login')}}" method="post">
+    <div class ="mb-3"> 
+        <label for="Username" class="Form-label">Username :</label>
+        <input type ="text" class="form-control" id="Username" 
+        name="Username" placeholder="Username" required>
+    </div><!--Username for login-->
+
+    <div class ="mb-3"> 
+        <label for="Password" class="Form-label">Password :</label>
+        <input type ="text" class="form-control" id="Password" 
+        name="Password" placeholder="Password" required>
+    </div><!--Pass for login-->
+
+    <div class="mb-3">
+        <button  type="submit" class="btn btn-primary">login</button>
+    </div><!--login-->
+
+</form>
